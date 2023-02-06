@@ -9,7 +9,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import com.example.LoginTest.config.auth.PrincipalDetails;
-import com.example.LoginTest.dto.LoginRequestDto;
+import com.example.LoginTest.core.account.joinAndLogin.dto.LoginRequestDto;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

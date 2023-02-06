@@ -1,10 +1,7 @@
-package com.example.LoginTest.domain;
+package com.example.LoginTest.core.account.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,8 +15,9 @@ import java.util.List;
 @Data
 @Entity
 @Getter
-@NoArgsConstructor  // ??
-@AllArgsConstructor // ??
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // TODO : AUTO vs IDENTITY ???
@@ -28,7 +26,7 @@ public class User {
     private String password;
     private String email;
 
-    private int phoneNumber;
+    private String phoneNumber;
     private String roles; //ROLE_USER, ROLE_ADMIN
 
     private LocalDateTime createDate;
@@ -36,6 +34,7 @@ public class User {
 
     // TODO : 관련 에러 해결 https://jhkang-tech.tistory.com/92
 
+    @JsonIgnore
     public List<String> getRoleList() throws NullPointerException{
         System.out.println("User getRoleList called()");
         if(this.roles.length() > 0){

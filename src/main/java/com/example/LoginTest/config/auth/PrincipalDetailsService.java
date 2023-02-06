@@ -1,13 +1,14 @@
 package com.example.LoginTest.config.auth;
 
+import com.example.LoginTest.core.account.domain.User;
+import com.example.LoginTest.core.account.userCRUD.infrastructure.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import com.example.LoginTest.domain.User;
-import com.example.LoginTest.infrastructure.UserRepository;
+
 
 @Service
 @RequiredArgsConstructor

@@ -1,56 +1,27 @@
-# jpa의 persistence.xml과 같은 DB 설정코드 같은 파일
-server:
-  port: 8080
-  servlet:
-    context-path: /
-    encoding:
-      charset: UTF-8
-      enabled: true
-      force: true
-
 logging:
   pattern:
     console: "[%d{MM:mm:ss.SSS}][%-5level][%logger.%method:%line] - %msg%n"
   level:
     dev.bank : DEBUG
 
+#DB 연결
 spring:
-  #DB 연결
   datasource:
-    url: jdbc:h2:tcp://localhost/~/test  # TCP 서버 방식 : 인메모리 방식과 다르게 어플리케이션이 종료되어도 데이터가 사라지지 않고 유지되는 방식
-    driver-class-name: org.h2.Driver
-    username: sa
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/penterest?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: Abcd123@ # https://luna-archive.tistory.com/17
   jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
     hibernate:
-#                  ddl-auto : create
-      hibernate.hbm2ddl.auto: update
+      ddl-auto: create
+      #      hibernate.hbm2ddl.auto: update
+#    open-in-view: true #https://gracelove91.tistory.com/100
+    properties:
+      hibernate:
+        format_sql: true
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
-
-# JSON parse error 관련 config
-#  #https://jhkang-tech.tistory.com/92
-#  jackson:
-#    serialization:
-#      fail-on-empty-beans: false
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

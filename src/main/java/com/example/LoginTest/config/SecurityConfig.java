@@ -1,7 +1,7 @@
 package com.example.LoginTest.config;
 
-import com.example.LoginTest.infrastructure.UserRepository;
-import lombok.RequiredArgsConstructor;
+
+import com.example.LoginTest.core.account.userCRUD.infrastructure.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -95,7 +95,6 @@ public class SecurityConfig{
                 .and()
                 .formLogin().disable()
                 .httpBasic().disable()
-
 
                 .addFilter(new JwtAuthenticationFilter(authenticationManager()))
                 .addFilter(new JwtAuthorizationFilter(authenticationManager(), userRepository))
