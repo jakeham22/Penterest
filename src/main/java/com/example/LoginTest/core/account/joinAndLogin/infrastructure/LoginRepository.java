@@ -1,4 +1,4 @@
-package com.example.LoginTest.infrastructure;//package penterest_spring.demo.core.account.infrastructure;
+package com.example.LoginTest.core.account.joinAndLogin.infrastructure;//package penterest_spring.demo.core.account.infrastructure;
 //
 //import org.springframework.data.jpa.repository.JpaRepository;
 //import org.springframework.stereotype.Repository;

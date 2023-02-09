@@ -1,14 +1,17 @@
-package com.example.LoginTest.controller;
+package com.example.LoginTest.core.account.joinAndLogin.contoroller;
 
 
 import com.example.LoginTest.config.auth.PrincipalDetailsService;
-import com.example.LoginTest.infrastructure.UserRepository;
+
+import com.example.LoginTest.core.account.domain.User;
+import com.example.LoginTest.core.account.userCRUD.infrastructure.UserRepository;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import com.example.LoginTest.config.auth.PrincipalDetails;
-import com.example.LoginTest.domain.User;
+
 
 
 import javax.servlet.http.HttpSession;
@@ -16,7 +19,8 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("api/v1")
+@RequestMapping("api/accounts")
+@Api(tags = "Login and Join API")
 @RequiredArgsConstructor
 public class RestApiController {
     private final UserRepository userRepository;

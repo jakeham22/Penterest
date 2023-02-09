@@ -3,13 +3,13 @@ package com.example.LoginTest.config.jwt;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.example.LoginTest.config.auth.PrincipalDetails;
-import com.example.LoginTest.domain.User;
-import com.example.LoginTest.infrastructure.UserRepository;
+
+import com.example.LoginTest.core.account.domain.User;
+import com.example.LoginTest.core.account.userCRUD.infrastructure.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 import javax.servlet.FilterChain;

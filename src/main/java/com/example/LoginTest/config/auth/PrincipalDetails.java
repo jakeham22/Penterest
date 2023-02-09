@@ -1,8 +1,9 @@
 package com.example.LoginTest.config.auth;
 
+import com.example.LoginTest.core.account.domain.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import com.example.LoginTest.domain.User;
+
 
 import java.util.ArrayList;
 import java.util.Collection;

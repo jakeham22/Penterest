@@ -1,6 +1,8 @@
-package com.example.LoginTest.infrastructure;
+package com.example.LoginTest.core.account.userCRUD.infrastructure;
 
-import com.example.LoginTest.domain.User;
+
+
+import com.example.LoginTest.core.account.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

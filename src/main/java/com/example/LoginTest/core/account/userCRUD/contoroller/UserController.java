@@ -1,9 +1,10 @@
-package com.example.LoginTest.controller;
+package com.example.LoginTest.core.account.userCRUD.contoroller;
 
-import com.example.LoginTest.domain.User;
-import com.example.LoginTest.service.UserService;
+
+import com.example.LoginTest.core.account.domain.User;
+import com.example.LoginTest.core.account.userCRUD.aplication.UserService;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.Optional;
  */
 @RestController
 @RequestMapping("/api/users")
+@Api(tags = "User CRUD API")
 @Slf4j
 public class UserController {
     /*
@@ -98,5 +100,9 @@ public class UserController {
         log.info("-- @RequestParam Gif: {}", deleteUserId);
         return userService.removeUser(deleteUserId);
     }
+
+
+
+
 
 }
