@@ -1,6 +1,7 @@
 # Penterest_
 
 프로젝트명 : Penterest
+
 서비스 설명 : 비디오에서 GIF로 변환, 게시, 공유, 검색 서비스
 기술
 - BackEnd : java, Spring Framework(Spring Boot, Spring Security), Swagger, Jwt
